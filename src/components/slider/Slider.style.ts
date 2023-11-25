@@ -15,15 +15,16 @@ export const AppSliderStyle = styled.div`
   transform: translateY(-50%);
 `;
 
-export const AppSliderSectionStyle = styled.div`
+export const AppSliderSectionStyle = styled.div<{ selected: boolean }>`
   font-size: inherit;
 
-  height: 20em;
-  width: 0rem;
+  height: ${({ selected }) => (selected ? "52em" : "12em")};
+  width: auto;
 
   display: flex;
-  justify-content: center;
+  justify-content: ${({ selected }) => (selected ? "flex-start" : "center")};
   align-items: center;
+  flex-flow: column;
 
   position: relative;
 
@@ -45,7 +46,17 @@ export const AppSliderSectionStyle = styled.div`
 
 type AppSliderPointStyleProps = {
   content: string;
+  selected: boolean;
 };
+
+export const AppSliderSectionSpacingStyle = styled.div<{ selected: boolean }>`
+  height: 100%;
+  margin: ${({ selected }) => (selected ? "3.5em 0" : "")};
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
+`;
 
 export const AppSliderPointStyle = styled.div<AppSliderPointStyleProps>`
   position: relative;
@@ -54,6 +65,44 @@ export const AppSliderPointStyle = styled.div<AppSliderPointStyleProps>`
   width: calc(5em - 8px);
 
   border: 4px solid rgb(255, 217, 0);
+
+  background-color: rgba(255, 217, 0, 0.3);
+
+  border-radius: 100%;
+
+  margin-bottom: ${({ selected }) => (selected ? "7em" : "")};
+
+  z-index: 5;
+
+  &::after {
+    content: "${({ content }) => content}";
+    position: absolute;
+    right: 0;
+    top: 50%;
+
+    transform: translateX(125%) translateY(-50%);
+
+    font-size: 1.5rem;
+    color: rgb(255, 217, 0);
+    text-shadow: 0 0 1px rgb(255, 255, 255);
+  }
+`;
+
+export const AppSubSliderSectionStyle = styled.div`
+  height: 33em;
+  display: flex;
+  flex-flow: column;
+  justify-content: space-between;
+  align-items: center;
+`;
+
+export const AppSubSliderPointStyle = styled.div`
+  font-size: inherit;
+  position: relative;
+  height: calc(3.5em - 6px);
+  width: calc(3.5em - 6px);
+
+  border: 3px solid rgb(255, 217, 0);
 
   background-color: rgba(255, 217, 0, 0.3);
 
@@ -69,35 +118,8 @@ export const AppSliderPointStyle = styled.div<AppSliderPointStyleProps>`
 
     transform: translateX(125%) translateY(-50%);
 
-    font-size: 1.5rem;
+    font-size: 1rem;
     color: rgb(255, 217, 0);
     text-shadow: 0 0 1px rgb(255, 255, 255);
-
-    /* color: rgba(255, 217, 0, 0.3);
-  text-shadow: 0 0 1px rgba(255, 255, 255, 0.3); */
   }
-`;
-
-export const AppSubSliderSectionStyle = styled.div`
-  font-size: inherit;
-  height: calc(43.4em);
-  z-index: 100;
-
-  display: flex;
-  flex-flow: column;
-  justify-content: space-evenly;
-`;
-
-export const AppSubSliderPointStyle = styled.div`
-  font-size: inherit;
-  height: calc(3.5em - 6px);
-  width: calc(3.5em - 6px);
-
-  border: 3px solid rgb(255, 217, 0);
-
-  background-color: rgba(255, 217, 0, 0.3);
-
-  border-radius: 100%;
-
-  z-index: 5;
 `;

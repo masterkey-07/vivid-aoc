@@ -1,11 +1,6 @@
-.app-container {
-  height: 100vh;
-  width: 100vw;
+import styled from "styled-components";
 
-  background-color: rgba(62, 73, 105, 255);
-}
-
-.app-container .fake-moon {
+const StyledMoon = styled.div`
   position: fixed;
 
   left: 50%;
@@ -21,4 +16,8 @@
   width: 50vh;
 
   box-shadow: -30px 0px 40px 0px rgba(0, 0, 0, 0.5);
-}
+`;
+
+export const Moon = () => {
+  return <StyledMoon className="fake-moon" />;
+};
