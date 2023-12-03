@@ -1,6 +1,6 @@
 import Button from "../../button/Button";
 
-export const IntroductionFourth = () => {
+export const ArchitectureFirst = () => {
   return (
     <div
       style={{
@@ -28,29 +28,9 @@ export const IntroductionFourth = () => {
           fontSize: "3rem",
           color: '#3C486B',
         }}>
-          Agradecimentos para a equipe de desenvolvimento do Vivid AOC:
-          </p>
-          <p style={{ 
-          fontWeight: "bold",
-          fontSize: "3rem",
-          color: '#3C486B',
-        }}>
-          <br></br>
-            -Victor 
-            <br>
-            </br>
-            -Maria Clara
-            <br>
-            </br>
-            -David
-            <br>
-            </br>
-            -João
-            <br>
-            </br>
-            -Vinicius
+          O termo "arquitetura" refere-se ao projeto e à estrutura fundamental de um sistema computacional. Especificamente, ela abrange a organização e o design dos componentes hardware de um computador, incluindo processadores, memória, dispositivos de entrada/saída e a interconexão entre esses elementos.
         </p>
-        <Button text="Continuar!" link="/architecture/first-section" />
+        <Button text="Continuar!" link="/architecture/second-section" />
       </div>
     </div>
   );
