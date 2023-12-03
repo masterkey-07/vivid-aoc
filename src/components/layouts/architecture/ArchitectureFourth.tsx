@@ -39,9 +39,7 @@ export const ArchitectureFourth = () => {
       >
 
         <h2 style={{ fontSize: '3rem', color: '#3C486B' }}>Quiz</h2>
-
-        {/* Seção do Quiz */}
-        <div style={{ marginTop: '30px' }}>
+        <div style={{ marginTop: '30px', textAlign: 'left' }}>
           <p style={{ fontSize: '2rem', color: '#3C486B', textAlign: 'left' }}>
             Pergunta 1: Qual é a principal função dos registradores na CPU?
           </p>
@@ -100,6 +98,7 @@ export const ArchitectureFourth = () => {
           <p style={{ fontSize: '2rem', marginTop: '20px', color: '#3C486B', textAlign: 'left' }}>
             Pergunta 2: O que é a Unidade de Controle (UC) na CPU e qual é a sua função principal?
           </p>
+          <br></br>
           <form>
           <label style={{ fontSize: '1.7rem', color: '#3C486B', textAlign: 'left' }}>
               <input
