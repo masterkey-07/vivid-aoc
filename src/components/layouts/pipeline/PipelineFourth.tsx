@@ -1,7 +1,7 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import Button from "../../button/Button";
 
-export const ArchitectureFourth = () => {
+export const PipelineFourthSection = () => {
   const [answers, setAnswers] = useState({
     question1: null,
     question2: null,
@@ -37,16 +37,19 @@ export const ArchitectureFourth = () => {
           backgroundColor: "rgba(255, 255, 255, 0.7)",
         }}
       >
-        <h2 style={{ fontSize: "3rem", color: "#3C486B" }}>Quiz</h2>
-        <div style={{ marginTop: "30px", textAlign: "left" }}>
-          <p style={{ fontSize: "2rem", color: "#3C486B", textAlign: "left" }}>
-            Pergunta 1: Qual é a principal função dos registradores na CPU?
+        <h2 style={{ fontSize: "2rem", color: "#3C486B" }}>Quiz</h2>
+
+        {/* Seção do Quiz */}
+        <div style={{ marginTop: "30px" }}>
+          <p style={{ fontSize: "1rem", color: "#3C486B", textAlign: "left" }}>
+            Pergunta 1: Qual é a principal vantagem de um pipeline em um
+            processador?
           </p>
           <br></br>
           <form>
             <label
               style={{
-                fontSize: "1.7rem",
+                fontSize: "1rem",
                 color: "#3C486B",
                 textAlign: "left",
               }}
@@ -57,13 +60,13 @@ export const ArchitectureFourth = () => {
                 checked={answers.question1 === "A"}
                 onChange={() => setAnswers({ ...answers, question1: "A" })}
               />
-              A) Armazenar permanentemente os programas.
+              A) Aumento da complexidade do processador.
             </label>
             <br />
             <br></br>
             <label
               style={{
-                fontSize: "1.7rem",
+                fontSize: "1rem",
                 color: "#3C486B",
                 textAlign: "left",
               }}
@@ -74,13 +77,13 @@ export const ArchitectureFourth = () => {
                 checked={answers.question1 === "B"}
                 onChange={() => setAnswers({ ...answers, question1: "B" })}
               />
-              B) Realizar operações matemáticas complexas.
+              B) Redução do consumo de energia.
             </label>
             <br />
             <br></br>
             <label
               style={{
-                fontSize: "1.7rem",
+                fontSize: "1rem",
                 color: "#3C486B",
                 textAlign: "left",
               }}
@@ -91,13 +94,13 @@ export const ArchitectureFourth = () => {
                 checked={answers.question1 === "C"}
                 onChange={() => setAnswers({ ...answers, question1: "C" })}
               />
-              C) Controlar a execução de programas.
+              C) Aumento da latência.
             </label>
             <br />
             <br></br>
             <label
               style={{
-                fontSize: "1.7rem",
+                fontSize: "1rem",
                 color: "#3C486B",
                 textAlign: "left",
               }}
@@ -108,13 +111,13 @@ export const ArchitectureFourth = () => {
                 checked={answers.question1 === "D"}
                 onChange={() => setAnswers({ ...answers, question1: "D" })}
               />
-              D) Armazenar dados temporariamente.
+              D) Aumento da velocidade de processamento.
             </label>
             <br />
             <br></br>
             <label
               style={{
-                fontSize: "1.7rem",
+                fontSize: "1rem",
                 color: "#3C486B",
                 textAlign: "left",
               }}
@@ -125,27 +128,28 @@ export const ArchitectureFourth = () => {
                 checked={answers.question1 === "E"}
                 onChange={() => setAnswers({ ...answers, question1: "E" })}
               />
-              E) Gerar endereços de memória.
+              E) Diminuição do tamanho do processador.
             </label>
           </form>
 
           <br></br>
           <p
             style={{
-              fontSize: "2rem",
+              fontSize: "1rem",
               marginTop: "20px",
               color: "#3C486B",
               textAlign: "left",
             }}
           >
-            Pergunta 2: O que é a Unidade de Controle (UC) na CPU e qual é a sua
-            função principal?
+            Pergunta 2: Considerando a aplicação do conceito de pipeline na
+            nossa analogia, o que pode acontecer se um cliente quiser que a
+            etapa de dobra de suas roupas seja pulada (ele não deseja receber as
+            roupas dobradas)?
           </p>
-          <br></br>
           <form>
             <label
               style={{
-                fontSize: "1.7rem",
+                fontSize: "1rem",
                 color: "#3C486B",
                 textAlign: "left",
               }}
@@ -156,13 +160,13 @@ export const ArchitectureFourth = () => {
                 checked={answers.question2 === "A"}
                 onChange={() => setAnswers({ ...answers, question2: "A" })}
               />
-              A) Coordenar os demais componentes da CPU.
+              A) Atraso na entrega das roupas do cliente.
             </label>
             <br />
             <br></br>
             <label
               style={{
-                fontSize: "1.7rem",
+                fontSize: "1rem",
                 color: "#3C486B",
                 textAlign: "left",
               }}
@@ -173,13 +177,14 @@ export const ArchitectureFourth = () => {
                 checked={answers.question2 === "B"}
                 onChange={() => setAnswers({ ...answers, question2: "B" })}
               />
-              B) Realizar operações lógicas e aritméticas.
+              B) Necessidade de retrabalho para adicionar a etapa pulada
+              posteriormente.
             </label>
             <br />
             <br></br>
             <label
               style={{
-                fontSize: "1.7rem",
+                fontSize: "1rem",
                 color: "#3C486B",
                 textAlign: "left",
               }}
@@ -190,13 +195,13 @@ export const ArchitectureFourth = () => {
                 checked={answers.question2 === "C"}
                 onChange={() => setAnswers({ ...answers, question2: "C" })}
               />
-              C) Armazenar dados permanentemente.
+              C) Possível desperdício de recursos e tempo.
             </label>
             <br />
             <br></br>
             <label
               style={{
-                fontSize: "1.7rem",
+                fontSize: "1rem",
                 color: "#3C486B",
                 textAlign: "left",
               }}
@@ -207,13 +212,13 @@ export const ArchitectureFourth = () => {
                 checked={answers.question2 === "D"}
                 onChange={() => setAnswers({ ...answers, question2: "D" })}
               />
-              D) Controlar a exibição de vídeos.
+              D) Melhor eficiência no processamento das roupas.
             </label>
             <br />
             <br></br>
             <label
               style={{
-                fontSize: "1.7rem",
+                fontSize: "1rem",
                 color: "#3C486B",
                 textAlign: "left",
               }}
@@ -224,17 +229,17 @@ export const ArchitectureFourth = () => {
                 checked={answers.question2 === "E"}
                 onChange={() => setAnswers({ ...answers, question2: "E" })}
               />
-              E) Armazenar instruções do sistema operacional.
+              E) Aumento da velocidade de processamento das roupas.
             </label>
           </form>
         </div>
         <br></br>
         {answers.question1 !== null && answers.question2 !== null && (
           <div style={{ marginTop: "20px" }}>
-            <p style={{ fontSize: "2rem", color: "#3C486B" }}>Respostas:</p>
+            <p style={{ fontSize: "1.2rem", color: "#3C486B" }}>Respostas:</p>
             <p
               style={{
-                fontSize: "1.7rem",
+                fontSize: "1rem",
                 color: "#3C486B",
                 textAlign: "left",
               }}
@@ -243,16 +248,16 @@ export const ArchitectureFourth = () => {
             </p>
             <p
               style={{
-                fontSize: "1.7rem",
+                fontSize: "1rem",
                 color: "#3C486B",
                 textAlign: "left",
               }}
             >
-              Pergunta 2: {answers.question2 === "A" ? "Correta" : "Incorreta"}
+              Pergunta 2: {answers.question2 === "C" ? "Correta" : "Incorreta"}
             </p>
           </div>
         )}
-        <Button text="Continuar!" link="/pipeline/first-section" />
+        <Button text="Continuar!" link="" />
       </div>
     </div>
   );
