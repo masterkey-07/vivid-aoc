@@ -72,6 +72,8 @@ export const AppSliderPointStyle = styled.div<AppSliderPointStyleProps>`
 
   margin-bottom: ${({ selected }) => (selected ? "7em" : "")};
 
+  box-shadow: ${({ selected }) => (selected ? "0 0 20px 0 yellow" : "none")};
+
   z-index: 5;
 
   &::after {
@@ -96,7 +98,7 @@ export const AppSubSliderSectionStyle = styled.div`
   align-items: center;
 `;
 
-export const AppSubSliderPointStyle = styled.div`
+export const AppSubSliderPointStyle = styled.div<{ selected: boolean }>`
   font-size: inherit;
   position: relative;
   height: calc(3.5em - 6px);
@@ -109,6 +111,8 @@ export const AppSubSliderPointStyle = styled.div`
   border-radius: 100%;
 
   z-index: 5;
+
+  box-shadow: ${({ selected }) => (selected ? "0 0 20px 0 yellow" : "none")};
 
   &::after {
     content: "${({ content }) => content}";
