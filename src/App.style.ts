@@ -17,7 +17,7 @@ export const AppContainer = styled.div`
     height: 100vh;
     width: 100vw;
 
-    backdrop-filter: saturate(0.5);
+    backdrop-filter: saturate(0.4);
   }
 `;
 

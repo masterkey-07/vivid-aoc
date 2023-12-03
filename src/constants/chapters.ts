@@ -9,19 +9,16 @@ export const chapters: Chapter[] = [
     subtitles: ["Bem Vindo!", "Propósito", "Conteúdo", "Agradecimentos"],
   },
   {
-    title: "Introdução",
-    subtitles: ["Bem Vindo!", "Propósito", "Conteúdo", "Agradecimentos"],
+    title: "Arquitetura",
+    subtitles: [
+      "O que é Arquitetura?",
+      "Componentes Específicos",
+      "Interação com uma Arquitetura",
+      "Perguntas",
+    ],
   },
   {
-    title: "Introdução",
-    subtitles: ["Bem Vindo!", "Propósito", "Conteúdo", "Agradecimentos"],
-  },
-  {
-    title: "Introdução",
-    subtitles: ["Bem Vindo!", "Propósito", "Conteúdo", "Agradecimentos"],
-  },
-  {
-    title: "Introdução",
+    title: "Pipeline",
     subtitles: ["Bem Vindo!", "Propósito", "Conteúdo", "Agradecimentos"],
   },
 ];

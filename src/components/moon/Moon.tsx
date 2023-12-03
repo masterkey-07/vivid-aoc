@@ -1,6 +1,8 @@
 import styled from "styled-components";
 import MoonImage from "../../assets/moon.png";
 import SpaceManImage from "../../assets/space-man.png";
+import Button from "../button/Button";
+import { Fragment } from "react";
 
 const StyledMoon = styled.div`
   position: fixed;
@@ -9,8 +11,6 @@ const StyledMoon = styled.div`
   top: 50%;
 
   transform: translate(-50%, -50%);
-
-  /* background-color: rgb(200, 200, 200); */
 
   border-radius: 100%;
 
@@ -21,33 +21,60 @@ const StyledMoon = styled.div`
     position: absolute;
     transform: scale(1.5);
     z-index: 2;
+
+    height: 50vh;
+    width: 50vh;
+    -webkit-user-drag: none;
+    user-select: none;
   }
 
   .space-man {
     z-index: 2;
     position: absolute;
-    right: -15rem;
-    top: -15rem;
+    right: -15vw;
+    top: -30vh;
 
     transform: scale(0.8);
+
+    height: 50vh;
+    width: 50vh;
+    user-select: none;
+    -webkit-user-drag: none;
   }
 
   .moon-shadow {
     z-index: 1;
     position: absolute;
+    height: 50vh;
+    width: 50vh;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    background-color: red;
+    border-radius: 100%;
+    box-shadow: -40px 0px 50px 10px rgba(0, 0, 0, 0.5);
+    user-select: none;
+  }
 
-    width: 38rem;
-    height: 38rem;
+  span {
+    z-index: 2;
+    position: absolute;
+
+    user-select: none;
+
     left: 50%;
     top: 50%;
 
+    text-align: center;
+
     transform: translate(-50%, -50%);
 
-    /* background-color: rgb(200, 200, 200); */
+    font-size: 7vw;
+    font-weight: 700;
 
-    border-radius: 100%;
+    color: white;
 
-    box-shadow: -40px 0px 50px 10px rgba(0, 0, 0, 0.5);
+    text-shadow: 0 0 10px black;
   }
 
   &::after {
@@ -57,10 +84,14 @@ const StyledMoon = styled.div`
 
 export const Moon = () => {
   return (
-    <StyledMoon>
-      <img className="moon" src={MoonImage} />
-      <img className="space-man" src={SpaceManImage} />
-      <div className="moon-shadow" />
-    </StyledMoon>
+    <Fragment>
+      <StyledMoon>
+        <img className="moon" src={MoonImage} />
+        <img className="space-man" src={SpaceManImage} />
+        <div className="moon-shadow" />
+        <span>Vivid AOC</span>
+      </StyledMoon>
+      <Button text="Começar!" link="/introduction/first-section" />
+    </Fragment>
   );
 };
