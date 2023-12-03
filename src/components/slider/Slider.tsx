@@ -1,3 +1,4 @@
+import { useLocation } from "react-router-dom";
 import { chapters } from "../../constants/chapters";
 import {
   AppSliderPointStyle,
@@ -7,13 +8,12 @@ import {
   AppSliderSectionSpacingStyle,
   AppSubSliderSectionStyle,
 } from "./Slider.style";
-import React, { FC, Fragment, useState } from "react";
+import { FC, Fragment, useEffect, useState } from "react";
 
 type SliderPointProps = {
   title: string;
   subtitles: string[];
   selected: boolean;
-  onSelection: () => void;
 };
 
 type SubSliderPointProps = {
@@ -21,29 +21,37 @@ type SubSliderPointProps = {
   subtitles: string[];
 };
 
+const indexMap: Record<number, string> = {
+  0: "first",
+  1: "second",
+  2: "third",
+  3: "fourth",
+};
+
 const SubSliderPoint: FC<SubSliderPointProps> = ({ selected, subtitles }) => {
+  const location = useLocation();
+
   if (!selected) return <Fragment />;
 
   return (
     <AppSubSliderSectionStyle>
-      {subtitles.map((subtitle) => (
-        <AppSubSliderPointStyle content={subtitle} />
+      {subtitles.map((subtitle, index) => (
+        <AppSubSliderPointStyle
+          selected={location.pathname.includes(indexMap[index])}
+          content={subtitle}
+        />
       ))}
     </AppSubSliderSectionStyle>
   );
 };
 
 const SliderPoint: FC<SliderPointProps> = (props) => {
-  const { onSelection, selected, subtitles, title } = props;
+  const { selected, subtitles, title } = props;
 
   return (
     <AppSliderSectionStyle selected={selected}>
       <AppSliderSectionSpacingStyle selected={selected}>
-        <AppSliderPointStyle
-          content={title}
-          selected={selected}
-          onClick={onSelection}
-        />
+        <AppSliderPointStyle content={title} selected={selected} />
         <SubSliderPoint selected={selected} subtitles={subtitles} />
       </AppSliderSectionSpacingStyle>
     </AppSliderSectionStyle>
@@ -51,7 +59,9 @@ const SliderPoint: FC<SliderPointProps> = (props) => {
 };
 
 export const Slider = () => {
-  const [selectedPointIndex, setSelectedPoint] = useState(0);
+  const location = useLocation();
+
+  console.log(location.pathname);
 
   return (
     <AppSliderStyle>
@@ -61,8 +71,7 @@ export const Slider = () => {
             key={chapter.title}
             title={chapter.title}
             subtitles={chapter.subtitles}
-            onSelection={() => setSelectedPoint(index)}
-            selected={selectedPointIndex === index}
+            selected={location.pathname.includes(chapter.key)}
           />
         );
       })}

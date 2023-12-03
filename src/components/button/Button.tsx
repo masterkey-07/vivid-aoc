@@ -3,10 +3,12 @@ import { useNavigate } from "react-router-dom";
 const Button = ({
   text,
   link,
+  isBack = false,
   style = {},
 }: {
   text: string;
   link: string;
+  isBack?: boolean;
   style?: React.CSSProperties;
 }) => {
   const navigate = useNavigate();
@@ -19,7 +21,8 @@ const Button = ({
       style={{
         ...style,
         position: "fixed",
-        right: "5vw",
+        right: isBack ? "" : "5vw",
+        left: isBack ? "20%" : "",
         bottom: "5vh",
         zIndex: "10",
         fontSize: "3rem",

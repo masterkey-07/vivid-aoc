@@ -1,6 +1,6 @@
 import Button from "../../button/Button";
 
-export const IntroductionFirst = () => {
+export const IntroductionThird = () => {
   return (
     <div
       style={{
@@ -30,12 +30,27 @@ export const IntroductionFirst = () => {
             color: "#3C486B",
           }}
         >
-          Bem-vindo ao 'Vivid AOC', uma emocionante aventura interativa
-          projetada para desvendar os segredos da Arquitetura e Organização de
-          Computadores (AOC).
+          Os tópicos abordados nessa aventura serão:
         </p>
-        <Button text="Voltar" link="/" isBack />
-        <Button text="Continuar!" link="/introduction/second-section" />
+        <p
+          style={{
+            fontWeight: "bold",
+            fontSize: "3rem",
+            color: "#3C486B",
+          }}
+        >
+          <br></br>
+          -Pipeline
+          <br></br>
+          -Unidade Central de Processamento
+          <br></br>
+          -Memória Cache
+          <br></br>
+          -Hierarquia de memória
+          <br></br>
+          -Instruções
+        </p>
+        <Button text="Continuar!" link="/memory/fourth-section" />
       </div>
     </div>
   );
