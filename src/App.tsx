@@ -9,6 +9,10 @@ import { IntroductionFirst } from "./components/layouts/introduction/Introductio
 import { IntroductionSecond } from "./components/layouts/introduction/IntroductionSecond";
 import { IntroductionThird } from "./components/layouts/introduction/IntroductionThird";
 import { IntroductionFourth } from "./components/layouts/introduction/IntroductionFourth";
+import { ArchitectureFirst } from "./components/layouts/architecture/ArchitectureFirst";
+import { ArchitectureSecond } from "./components/layouts/architecture/ArchitectureSecond";
+import { ArchitectureThird } from "./components/layouts/architecture/ArchitectureThird.js";
+import { ArchitectureFourth } from "./components/layouts/architecture/ArchitectureFourth.js";
 
 const AppWrapper = () => {
   return (
@@ -42,10 +46,10 @@ const browserRouter = createBrowserRouter([
         path: "architecture",
         element: <BasicLayout />,
         children: [
-          { path: "first-section" },
-          { path: "second-section" },
-          { path: "third-section" },
-          { path: "fourth-section" },
+          { path: "first-section", element: <ArchitectureFirst/>},
+          { path: "second-section", element: <ArchitectureSecond/>},
+          { path: "third-section", element: <ArchitectureThird/> },
+          { path: "fourth-section", element: <ArchitectureFourth/> },
         ],
       },
       {
