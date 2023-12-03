@@ -13,6 +13,7 @@ import { ArchitectureFirst } from "./components/layouts/architecture/Architectur
 import { ArchitectureSecond } from "./components/layouts/architecture/ArchitectureSecond";
 import { ArchitectureThird } from "./components/layouts/architecture/ArchitectureThird.js";
 import { ArchitectureFourth } from "./components/layouts/architecture/ArchitectureFourth.js";
+import { MemoryThird } from "./components/layouts/memory/MemoryThird.js";
 
 const AppWrapper = () => {
   return (
@@ -36,30 +37,50 @@ const browserRouter = createBrowserRouter([
         path: "introduction",
         element: <BasicLayout />,
         children: [
-          { path: "first-section", element: <IntroductionFirst/>},
-          { path: "second-section", element: <IntroductionSecond/> },
-          { path: "third-section", element: <IntroductionThird/> },
-          { path: "fourth-section", element: <IntroductionFourth/>},
+          { path: "first-section", element: <IntroductionFirst /> },
+          { path: "second-section", element: <IntroductionSecond /> },
+          { path: "third-section", element: <IntroductionThird /> },
+          { path: "fourth-section", element: <IntroductionFourth /> },
         ],
       },
       {
         path: "architecture",
         element: <BasicLayout />,
         children: [
-          { path: "first-section", element: <ArchitectureFirst/>},
-          { path: "second-section", element: <ArchitectureSecond/>},
-          { path: "third-section", element: <ArchitectureThird/> },
-          { path: "fourth-section", element: <ArchitectureFourth/> },
+          { path: "first-section", element: <ArchitectureFirst /> },
+          { path: "second-section", element: <ArchitectureSecond /> },
+          { path: "third-section", element: <ArchitectureThird /> },
+          { path: "fourth-section", element: <ArchitectureFourth /> },
         ],
       },
       {
         path: "pipeline",
         element: <BasicLayout />,
         children: [
-          { path: "first-section" },
-          { path: "second-section" },
-          { path: "third-section" },
-          { path: "fourth-section" },
+          { path: "first-section", element: <Fragment /> },
+          { path: "second-section", element: <Fragment /> },
+          { path: "third-section", element: <Fragment /> },
+          { path: "fourth-section", element: <Fragment /> },
+        ],
+      },
+      {
+        path: "memory",
+        element: <BasicLayout />,
+        children: [
+          { path: "first-section", element: <Fragment /> },
+          { path: "second-section", element: <Fragment /> },
+          { path: "third-section", element: <MemoryThird /> },
+          { path: "fourth-section", element: <Fragment /> },
+        ],
+      },
+      {
+        path: "hierarch",
+        element: <BasicLayout />,
+        children: [
+          { path: "first-section", element: <Fragment /> },
+          { path: "second-section", element: <Fragment /> },
+          { path: "third-section", element: <Fragment /> },
+          { path: "fourth-section", element: <Fragment /> },
         ],
       },
     ],

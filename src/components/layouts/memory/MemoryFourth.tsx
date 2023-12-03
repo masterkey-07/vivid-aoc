@@ -1,6 +1,6 @@
 import Button from "../../button/Button";
 
-export const IntroductionFourth = () => {
+export const MemoryFourth = () => {
   return (
     <div
       style={{

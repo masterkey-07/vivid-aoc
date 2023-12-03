@@ -1,6 +1,6 @@
 import Button from "../../button/Button";
 
-export const IntroductionSecond = () => {
+export const MemorySecond = () => {
   return (
     <div
       style={{
