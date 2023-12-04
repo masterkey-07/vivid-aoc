@@ -14,6 +14,10 @@ import { ArchitectureSecond } from "./components/layouts/architecture/Architectu
 import { ArchitectureThird } from "./components/layouts/architecture/ArchitectureThird";
 import { ArchitectureFourth } from "./components/layouts/architecture/ArchitectureFourth";
 import { InstructionFirst } from "./components/layouts/instructions/InstructionFirst";
+import { PipelineFirstSection } from "./components/layouts/pipeline/PipelineFirst.js";
+import { PipelineSecondSection } from "./components/layouts/pipeline/PipelineSecond.js";
+import { PipelineThirdSection } from "./components/layouts/pipeline/PipelineThird.js";
+import { PipelineFourthSection } from "./components/layouts/pipeline/PipelineFourth.js";
 
 const AppWrapper = () => {
   return (
@@ -37,30 +41,30 @@ const browserRouter = createBrowserRouter([
         path: "introduction",
         element: <BasicLayout />,
         children: [
-          { path: "first-section", element: <IntroductionFirst/>},
-          { path: "second-section", element: <IntroductionSecond/> },
-          { path: "third-section", element: <IntroductionThird/> },
-          { path: "fourth-section", element: <IntroductionFourth/>},
+          { path: "first-section", element: <IntroductionFirst /> },
+          { path: "second-section", element: <IntroductionSecond /> },
+          { path: "third-section", element: <IntroductionThird /> },
+          { path: "fourth-section", element: <IntroductionFourth /> },
         ],
       },
       {
         path: "architecture",
         element: <BasicLayout />,
         children: [
-          { path: "first-section", element: <ArchitectureFirst/>},
-          { path: "second-section", element: <ArchitectureSecond/>},
-          { path: "third-section", element: <ArchitectureThird/> },
-          { path: "fourth-section", element: <ArchitectureFourth/> },
+          { path: "first-section", element: <ArchitectureFirst /> },
+          { path: "second-section", element: <ArchitectureSecond /> },
+          { path: "third-section", element: <ArchitectureThird /> },
+          { path: "fourth-section", element: <ArchitectureFourth /> },
         ],
       },
       {
         path: "pipeline",
         element: <BasicLayout />,
         children: [
-          { path: "first-section" },
-          { path: "second-section" },
-          { path: "third-section" },
-          { path: "fourth-section" },
+          { path: "first-section", element: <PipelineFirstSection /> },
+          { path: "second-section", element: <PipelineSecondSection /> },
+          { path: "third-section", element: <PipelineThirdSection /> },
+          { path: "fourth-section", element: <PipelineFourthSection /> },
         ],
       },
       {
