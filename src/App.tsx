@@ -21,7 +21,6 @@ import { MemoryFirst } from "./components/layouts/memory/MemoryFirst.js";
 import { MemorySecond } from "./components/layouts/memory/MemorySecond.js";
 import { MemoryFourth } from "./components/layouts/memory/MemoryFourth.js";
 import { MemoryThird } from "./components/layouts/memory/MemoryThird.js";
-import { PipelineThirdMeio } from "./components/layouts/pipeline/PipelineThirdMeio.js";
 
 const AppWrapper = () => {
   return (
@@ -67,7 +66,6 @@ const browserRouter = createBrowserRouter([
         children: [
           { path: "first-section", element: <PipelineFirstSection /> },
           { path: "second-section", element: <PipelineSecond /> },
-          { path: "thirdmeio-section", element: <PipelineThirdMeio /> },
           { path: "third-section", element: <PipelineThirdSection /> },
           { path: "fourth-section", element: <PipelineFourthSection /> },
         ],

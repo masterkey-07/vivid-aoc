@@ -26,25 +26,32 @@ export const MemorySecond = () => {
         <p
           style={{
             fontWeight: "bold",
-            fontSize: "3rem",
+            fontSize: "1.5rem",
             color: "#3C486B",
+            textAlign: "left",
+            padding: "1rem",
           }}
         >
-          Nosso objetivo é tornar o aprendizado desses conceitos complexos uma
-          jornada envolvente e acessível para todas as idades. Navegue por uma
-          CPU misteriosa, solucione quebra-cabeças e mergulhe na essência da
-          tecnologia computacional enquanto se diverte.
+          A hierarquia de memória é a organização de diferentes níveis de
+          armazenamento de dados em um sistema de computador, projetada para
+          otimizar o desempenho e a eficiência no acesso a dados e instruções.
+          Essa hierarquia é organizada em camadas, cada uma com características
+          específicas de tamanho, velocidade e custo. Os níveis típicos de uma
+          hierarquia de memória incluem:
+          <ul>
+            <li> Registradores da CPU</li>
+            <li>Cache L1 e L2</li>
+            <li>RAM</li>
+            <li>Armazenamento em nuvem</li>
+          </ul>
+          Agora iremos utilizar os conceitos de memória cache L1 e L2 para fazer
+          uma simulação, tais que L1 Cache é mais próxima da CPU, rápida,
+          armazena dados e instruções frequentes. L2 Cache está entre L1 e
+          memória principal, maior e mais lenta, compartilhada entre núcleos.
+          Ambas melhoram o desempenho ao reduzir o tempo de acesso à memória
+          principal, explorando o princípio da localidade.
         </p>
-        <p
-          style={{
-            fontWeight: "bold",
-            fontSize: "3rem",
-            color: "#3C486B",
-          }}
-        >
-          Prepare-se para desvendar o mundo da AOC e experimentar uma abordagem
-          única de aprendizado prático
-        </p>
+
         <Button text="Voltar" link="/memory/first-section" isBack />
         <Button text="Continuar!" link="/memory/third-section" />
       </div>

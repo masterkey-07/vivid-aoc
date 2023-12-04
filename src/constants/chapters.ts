@@ -17,17 +17,17 @@ export const chapters: Chapter[] = [
       "O que é Arquitetura?",
       "Componentes Específicos",
       "Interação com uma Arquitetura",
-      "Perguntas",
+      "Quiz",
     ],
   },
   {
     key: "pipeline",
     title: "Pipeline",
-    subtitles: ["Bem Vindo!", "Propósito", "Conteúdo", "Agradecimentos"],
+    subtitles: ["Introdução", "Conteúdo", "Simulação do Pipeline", "Quiz"],
   },
   {
     key: "memory",
     title: "Mémoria",
-    subtitles: ["Bem Vindo!", "Propósito", "Conteúdo", "Agradecimentos"],
+    subtitles: ["Introdução", "Conteúdo", "Simulação de Memória Cache", "Quiz"],
   },
 ];

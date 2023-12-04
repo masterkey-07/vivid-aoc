@@ -39,7 +39,9 @@ export const PipelineFourthSection = () => {
       >
         <h2 style={{ fontSize: "3rem", color: "#3C486B" }}>Quiz</h2>
         <div style={{ marginTop: "30px", textAlign: "left" }}>
-          <p style={{ fontSize: "2rem", color: "#3C486B", textAlign: "left" }}>
+          <p
+            style={{ fontSize: "1.5rem", color: "#3C486B", textAlign: "left" }}
+          >
             Pergunta 1: Qual é a principal vantagem de um pipeline em um
             processador?
           </p>
@@ -133,7 +135,7 @@ export const PipelineFourthSection = () => {
           <br></br>
           <p
             style={{
-              fontSize: "2rem",
+              fontSize: "1.5rem",
               marginTop: "20px",
               color: "#3C486B",
               textAlign: "left",
