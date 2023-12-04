@@ -71,7 +71,9 @@ export function PipelineThirdSection() {
             <button type="button" onClick={startPlay}>
               Play
             </button>
-            <br></br><br></br><br></br>
+            <br></br>
+            <br></br>
+            <br></br>
             <div className={styles.tableContainer}>
               <PipelineHeader />
               <Table>
@@ -105,6 +107,7 @@ export function PipelineThirdSection() {
           </div>
         </div>
       </article>
+      <Button text="Voltar" link="/pipeline/second-section" isBack />
       <Button text="Próximo" link="/pipeline/fourth-section" />
     </>
   );

@@ -1,6 +1,6 @@
 import Button from "../../button/Button";
 
-export const IntroductionFourth = () => {
+export const MemoryFourth = () => {
   return (
     <div
       style={{
@@ -50,7 +50,7 @@ export const IntroductionFourth = () => {
           <br></br>
           -Vinicius
         </p>
-        <Button text="Continuar!" link="/memory/fourth-section" />
+        <Button text="Voltar" link="/memory/third-section" isBack />
       </div>
     </div>
   );

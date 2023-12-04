@@ -42,7 +42,7 @@ export const PipelineFourthSection = () => {
           <p style={{ fontSize: "2rem", color: "#3C486B", textAlign: "left" }}>
             Pergunta 1: Qual é a principal vantagem de um pipeline em um
             processador?
-            </p>
+          </p>
           <br></br>
           <form>
             <label
@@ -59,7 +59,7 @@ export const PipelineFourthSection = () => {
                 onChange={() => setAnswers({ ...answers, question1: "A" })}
               />
               A) Aumento da complexidade do processador.
-              </label>
+            </label>
             <br />
             <br></br>
             <label
@@ -76,7 +76,7 @@ export const PipelineFourthSection = () => {
                 onChange={() => setAnswers({ ...answers, question1: "B" })}
               />
               B) Redução do consumo de energia.
-              </label>
+            </label>
             <br />
             <br></br>
             <label
@@ -93,7 +93,7 @@ export const PipelineFourthSection = () => {
                 onChange={() => setAnswers({ ...answers, question1: "C" })}
               />
               C) Aumento da latência.
-              </label>
+            </label>
             <br />
             <br></br>
             <label
@@ -110,7 +110,7 @@ export const PipelineFourthSection = () => {
                 onChange={() => setAnswers({ ...answers, question1: "D" })}
               />
               D) Aumento da velocidade de processamento.
-              </label>
+            </label>
             <br />
             <br></br>
             <label
@@ -127,7 +127,7 @@ export const PipelineFourthSection = () => {
                 onChange={() => setAnswers({ ...answers, question1: "E" })}
               />
               E) Diminuição do tamanho do processador.
-              </label>
+            </label>
           </form>
 
           <br></br>
@@ -143,7 +143,7 @@ export const PipelineFourthSection = () => {
             nossa analogia, o que pode acontecer se um cliente quiser que a
             etapa de dobra de suas roupas seja pulada (ele não deseja receber as
             roupas dobradas)?
-            </p>
+          </p>
           <br></br>
           <form>
             <label
@@ -160,7 +160,7 @@ export const PipelineFourthSection = () => {
                 onChange={() => setAnswers({ ...answers, question2: "A" })}
               />
               A) Atraso na entrega das roupas do cliente.
-              </label>
+            </label>
             <br />
             <br></br>
             <label
@@ -178,7 +178,7 @@ export const PipelineFourthSection = () => {
               />
               B) Necessidade de retrabalho para adicionar a etapa pulada
               posteriormente.
-              </label>
+            </label>
             <br />
             <br></br>
             <label
@@ -195,7 +195,7 @@ export const PipelineFourthSection = () => {
                 onChange={() => setAnswers({ ...answers, question2: "C" })}
               />
               C) Possível desperdício de recursos e tempo.
-              </label>
+            </label>
             <br />
             <br></br>
             <label
@@ -212,7 +212,7 @@ export const PipelineFourthSection = () => {
                 onChange={() => setAnswers({ ...answers, question2: "D" })}
               />
               D) Melhor eficiência no processamento das roupas.
-              </label>
+            </label>
             <br />
             <br></br>
             <label
@@ -229,7 +229,7 @@ export const PipelineFourthSection = () => {
                 onChange={() => setAnswers({ ...answers, question2: "E" })}
               />
               E) Aumento da velocidade de processamento das roupas.
-              </label>
+            </label>
           </form>
         </div>
         <br></br>
@@ -244,7 +244,7 @@ export const PipelineFourthSection = () => {
               }}
             >
               Pergunta 1: {answers.question1 === "D" ? "Correta" : "Incorreta"}
-              </p>
+            </p>
             <p
               style={{
                 fontSize: "1.7rem",
@@ -256,6 +256,7 @@ export const PipelineFourthSection = () => {
             </p>
           </div>
         )}
+        <Button text="Voltar" link="/pipeline/third-section" isBack />
         <Button text="Continuar!" link="/memory/first-section" />
       </div>
     </div>

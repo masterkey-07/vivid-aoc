@@ -17,6 +17,10 @@ import { PipelineFirstSection } from "./components/layouts/pipeline/PipelineFirs
 import { PipelineSecond } from "./components/layouts/pipeline/PipelineSecond";
 import { PipelineThirdSection } from "./components/layouts/pipeline/PipelineThird.js";
 import { PipelineFourthSection } from "./components/layouts/pipeline/PipelineFourth.js";
+import { MemoryFirst } from "./components/layouts/memory/MemoryFirst.js";
+import { MemorySecond } from "./components/layouts/memory/MemorySecond.js";
+import { MemoryFourth } from "./components/layouts/memory/MemoryFourth.js";
+import { MemoryThird } from "./components/layouts/memory/MemoryThird.js";
 import { PipelineThirdMeio } from "./components/layouts/pipeline/PipelineThirdMeio.js";
 
 const AppWrapper = () => {
@@ -66,6 +70,16 @@ const browserRouter = createBrowserRouter([
           { path: "thirdmeio-section", element: <PipelineThirdMeio /> },
           { path: "third-section", element: <PipelineThirdSection /> },
           { path: "fourth-section", element: <PipelineFourthSection /> },
+        ],
+      },
+      {
+        path: "memory",
+        element: <BasicLayout />,
+        children: [
+          { path: "first-section", element: <MemoryFirst /> },
+          { path: "second-section", element: <MemorySecond /> },
+          { path: "third-section", element: <MemoryThird /> },
+          { path: "fourth-section", element: <MemoryFourth /> },
         ],
       },
     ],

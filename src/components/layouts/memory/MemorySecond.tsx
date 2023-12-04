@@ -1,6 +1,6 @@
 import Button from "../../button/Button";
 
-export const IntroductionSecond = () => {
+export const MemorySecond = () => {
   return (
     <div
       style={{
@@ -45,6 +45,7 @@ export const IntroductionSecond = () => {
           Prepare-se para desvendar o mundo da AOC e experimentar uma abordagem
           única de aprendizado prático
         </p>
+        <Button text="Voltar" link="/memory/first-section" isBack />
         <Button text="Continuar!" link="/memory/third-section" />
       </div>
     </div>
