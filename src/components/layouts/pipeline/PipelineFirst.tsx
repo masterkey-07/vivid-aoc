@@ -13,7 +13,7 @@ export function PipelineFirstSection() {
       >
         <div
           style={{
-            backgroundColor: "#ffffff7c",
+            backgroundColor: "rgba(255, 255, 255, 0.7)",
             padding: "2rem",
             width: "80%",
             height: "200px",

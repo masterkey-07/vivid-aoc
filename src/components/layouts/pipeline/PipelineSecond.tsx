@@ -16,7 +16,7 @@ export function PipelineSecondSection() {
             width: "80%",
             margin: "0 auto",
             marginTop: "5rem",
-            backgroundColor: "#ffffff7c",
+            backgroundColor: "rgba(255, 255, 255, 0.7)",
             borderRadius: "10px",
             padding: "20px",
           }}

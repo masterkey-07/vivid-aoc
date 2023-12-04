@@ -35,6 +35,7 @@ export const PipelineFourthSection = () => {
           padding: "20px",
           textAlign: "center",
           backgroundColor: "rgba(255, 255, 255, 0.7)",
+          borderRadius: "10px",
         }}
       >
         <h2 style={{ fontSize: "2rem", color: "#3C486B" }}>Quiz</h2>
