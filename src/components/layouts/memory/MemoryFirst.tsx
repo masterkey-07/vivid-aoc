@@ -26,15 +26,19 @@ export const MemoryFirst = () => {
         <p
           style={{
             fontWeight: "bold",
-            fontSize: "3rem",
+            fontSize: "2rem",
             color: "#3C486B",
           }}
         >
-          Bem-vindo ao 'Vivid AOC', uma emocionante aventura interativa
-          projetada para desvendar os segredos da Arquitetura e Organização de
-          Computadores (AOC).
+          A Memória Cache é uma memória volátil com alta velocidade, localizada
+          dentro ou próxima à Unidade Central de Processamento (CPU). Ela
+          funciona como um armazenamento para dados e instruções que são
+          frequentemente acessados pela CPU, reduzindo, portanto, a necessidade
+          de acessar a memória RAM. Essa redução de acesso à RAM resulta em
+          melhorias significativas no desempenho geral do sistema
         </p>
-        <Button text="Continuar!" link="/introduction/second-section" />
+        <Button text="Voltar" link="/pipeline/fourth-section" isBack />
+        <Button text="Continuar!" link="/memory/second-section" />
       </div>
     </div>
   );

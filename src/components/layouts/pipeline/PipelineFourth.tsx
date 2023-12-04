@@ -11,7 +11,7 @@ export const PipelineFourthSection = () => {
     setAnswers({
       ...answers,
       question1: "D",
-      question2: "A",
+      question2: "C",
     });
   };
 
@@ -37,11 +37,9 @@ export const PipelineFourthSection = () => {
           backgroundColor: "rgba(255, 255, 255, 0.7)",
         }}
       >
-        <h2 style={{ fontSize: "2rem", color: "#3C486B" }}>Quiz</h2>
-
-        {/* Seção do Quiz */}
-        <div style={{ marginTop: "30px" }}>
-          <p style={{ fontSize: "1rem", color: "#3C486B", textAlign: "left" }}>
+        <h2 style={{ fontSize: "3rem", color: "#3C486B" }}>Quiz</h2>
+        <div style={{ marginTop: "30px", textAlign: "left" }}>
+          <p style={{ fontSize: "2rem", color: "#3C486B", textAlign: "left" }}>
             Pergunta 1: Qual é a principal vantagem de um pipeline em um
             processador?
           </p>
@@ -49,7 +47,7 @@ export const PipelineFourthSection = () => {
           <form>
             <label
               style={{
-                fontSize: "1rem",
+                fontSize: "1.7rem",
                 color: "#3C486B",
                 textAlign: "left",
               }}
@@ -66,7 +64,7 @@ export const PipelineFourthSection = () => {
             <br></br>
             <label
               style={{
-                fontSize: "1rem",
+                fontSize: "1.7rem",
                 color: "#3C486B",
                 textAlign: "left",
               }}
@@ -83,7 +81,7 @@ export const PipelineFourthSection = () => {
             <br></br>
             <label
               style={{
-                fontSize: "1rem",
+                fontSize: "1.7rem",
                 color: "#3C486B",
                 textAlign: "left",
               }}
@@ -100,7 +98,7 @@ export const PipelineFourthSection = () => {
             <br></br>
             <label
               style={{
-                fontSize: "1rem",
+                fontSize: "1.7rem",
                 color: "#3C486B",
                 textAlign: "left",
               }}
@@ -117,7 +115,7 @@ export const PipelineFourthSection = () => {
             <br></br>
             <label
               style={{
-                fontSize: "1rem",
+                fontSize: "1.7rem",
                 color: "#3C486B",
                 textAlign: "left",
               }}
@@ -135,7 +133,7 @@ export const PipelineFourthSection = () => {
           <br></br>
           <p
             style={{
-              fontSize: "1rem",
+              fontSize: "2rem",
               marginTop: "20px",
               color: "#3C486B",
               textAlign: "left",
@@ -146,10 +144,11 @@ export const PipelineFourthSection = () => {
             etapa de dobra de suas roupas seja pulada (ele não deseja receber as
             roupas dobradas)?
           </p>
+          <br></br>
           <form>
             <label
               style={{
-                fontSize: "1rem",
+                fontSize: "1.7rem",
                 color: "#3C486B",
                 textAlign: "left",
               }}
@@ -166,7 +165,7 @@ export const PipelineFourthSection = () => {
             <br></br>
             <label
               style={{
-                fontSize: "1rem",
+                fontSize: "1.7rem",
                 color: "#3C486B",
                 textAlign: "left",
               }}
@@ -184,7 +183,7 @@ export const PipelineFourthSection = () => {
             <br></br>
             <label
               style={{
-                fontSize: "1rem",
+                fontSize: "1.7rem",
                 color: "#3C486B",
                 textAlign: "left",
               }}
@@ -201,7 +200,7 @@ export const PipelineFourthSection = () => {
             <br></br>
             <label
               style={{
-                fontSize: "1rem",
+                fontSize: "1.7rem",
                 color: "#3C486B",
                 textAlign: "left",
               }}
@@ -218,7 +217,7 @@ export const PipelineFourthSection = () => {
             <br></br>
             <label
               style={{
-                fontSize: "1rem",
+                fontSize: "1.7rem",
                 color: "#3C486B",
                 textAlign: "left",
               }}
@@ -236,10 +235,10 @@ export const PipelineFourthSection = () => {
         <br></br>
         {answers.question1 !== null && answers.question2 !== null && (
           <div style={{ marginTop: "20px" }}>
-            <p style={{ fontSize: "1.2rem", color: "#3C486B" }}>Respostas:</p>
+            <p style={{ fontSize: "2rem", color: "#3C486B" }}>Respostas:</p>
             <p
               style={{
-                fontSize: "1rem",
+                fontSize: "1.7rem",
                 color: "#3C486B",
                 textAlign: "left",
               }}
@@ -248,7 +247,7 @@ export const PipelineFourthSection = () => {
             </p>
             <p
               style={{
-                fontSize: "1rem",
+                fontSize: "1.7rem",
                 color: "#3C486B",
                 textAlign: "left",
               }}
@@ -257,7 +256,8 @@ export const PipelineFourthSection = () => {
             </p>
           </div>
         )}
-        <Button text="Continuar!" link="" />
+        <Button text="Voltar" link="/pipeline/third-section" isBack />
+        <Button text="Continuar!" link="/memory/first-section" />
       </div>
     </div>
   );

@@ -50,7 +50,7 @@ export const MemoryFourth = () => {
           <br></br>
           -Vinicius
         </p>
-        <Button text="Continuar!" link="/memory/fourth-section" />
+        <Button text="Voltar" link="/memory/third-section" isBack />
       </div>
     </div>
   );

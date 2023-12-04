@@ -252,6 +252,7 @@ export const ArchitectureFourth = () => {
             </p>
           </div>
         )}
+        <Button text="Voltar" link="/architecture/third-section" isBack />
         <Button text="Continuar!" link="/pipeline/first-section" />
       </div>
     </div>

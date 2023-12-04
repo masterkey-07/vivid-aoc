@@ -11,16 +11,16 @@ import { IntroductionThird } from "./components/layouts/introduction/Introductio
 import { IntroductionFourth } from "./components/layouts/introduction/IntroductionFourth";
 import { ArchitectureFirst } from "./components/layouts/architecture/ArchitectureFirst";
 import { ArchitectureSecond } from "./components/layouts/architecture/ArchitectureSecond";
-import { ArchitectureThird } from "./components/layouts/architecture/ArchitectureThird.js";
-import { ArchitectureFourth } from "./components/layouts/architecture/ArchitectureFourth.js";
-import { MemoryThird } from "./components/layouts/memory/MemoryThird.js";
+import { ArchitectureThird } from "./components/layouts/architecture/ArchitectureThird";
+import { ArchitectureFourth } from "./components/layouts/architecture/ArchitectureFourth";
 import { PipelineFirstSection } from "./components/layouts/pipeline/PipelineFirst.js";
-import { PipelineSecondSection } from "./components/layouts/pipeline/PipelineSecond.js";
+import { PipelineSecondSection } from "./components/layouts/pipeline/PipelineSecond";
 import { PipelineThirdSection } from "./components/layouts/pipeline/PipelineThird.js";
 import { PipelineFourthSection } from "./components/layouts/pipeline/PipelineFourth.js";
 import { MemoryFirst } from "./components/layouts/memory/MemoryFirst.js";
 import { MemorySecond } from "./components/layouts/memory/MemorySecond.js";
 import { MemoryFourth } from "./components/layouts/memory/MemoryFourth.js";
+import { MemoryThird } from "./components/layouts/memory/MemoryThird.js";
 
 const AppWrapper = () => {
   return (
