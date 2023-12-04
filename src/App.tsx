@@ -18,6 +18,9 @@ import { PipelineFirstSection } from "./components/layouts/pipeline/PipelineFirs
 import { PipelineSecondSection } from "./components/layouts/pipeline/PipelineSecond.js";
 import { PipelineThirdSection } from "./components/layouts/pipeline/PipelineThird.js";
 import { PipelineFourthSection } from "./components/layouts/pipeline/PipelineFourth.js";
+import { MemoryFirst } from "./components/layouts/memory/MemoryFirst.js";
+import { MemorySecond } from "./components/layouts/memory/MemorySecond.js";
+import { MemoryFourth } from "./components/layouts/memory/MemoryFourth.js";
 
 const AppWrapper = () => {
   return (
@@ -71,20 +74,10 @@ const browserRouter = createBrowserRouter([
         path: "memory",
         element: <BasicLayout />,
         children: [
-          { path: "first-section", element: <Fragment /> },
-          { path: "second-section", element: <Fragment /> },
+          { path: "first-section", element: <MemoryFirst /> },
+          { path: "second-section", element: <MemorySecond /> },
           { path: "third-section", element: <MemoryThird /> },
-          { path: "fourth-section", element: <Fragment /> },
-        ],
-      },
-      {
-        path: "hierarch",
-        element: <BasicLayout />,
-        children: [
-          { path: "first-section", element: <Fragment /> },
-          { path: "second-section", element: <Fragment /> },
-          { path: "third-section", element: <Fragment /> },
-          { path: "fourth-section", element: <Fragment /> },
+          { path: "fourth-section", element: <MemoryFourth /> },
         ],
       },
     ],
