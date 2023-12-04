@@ -11,10 +11,12 @@ import { IntroductionThird } from "./components/layouts/introduction/Introductio
 import { IntroductionFourth } from "./components/layouts/introduction/IntroductionFourth";
 import { ArchitectureFirst } from "./components/layouts/architecture/ArchitectureFirst";
 import { ArchitectureSecond } from "./components/layouts/architecture/ArchitectureSecond";
-import { ArchitectureThird } from "./components/layouts/architecture/ArchitectureThird.js";
-import { ArchitectureFourth } from "./components/layouts/architecture/ArchitectureFourth.js";
+import { ArchitectureThird } from "./components/layouts/architecture/ArchitectureThird";
+import { ArchitectureFourth } from "./components/layouts/architecture/ArchitectureFourth";
+import { InstructionFirst } from "./components/layouts/instructions/InstructionFirst";
+import { InstructionSecond } from "./components/layouts/instructions/InstructionSecond";
 import { PipelineFirstSection } from "./components/layouts/pipeline/PipelineFirst.js";
-import { PipelineSecondSection } from "./components/layouts/pipeline/PipelineSecond.js";
+import { PipelineSecondSection } from "./components/layouts/pipeline/PipelineSecond";
 import { PipelineThirdSection } from "./components/layouts/pipeline/PipelineThird.js";
 import { PipelineFourthSection } from "./components/layouts/pipeline/PipelineFourth.js";
 
@@ -64,6 +66,14 @@ const browserRouter = createBrowserRouter([
           { path: "second-section", element: <PipelineSecondSection /> },
           { path: "third-section", element: <PipelineThirdSection /> },
           { path: "fourth-section", element: <PipelineFourthSection /> },
+        ],
+      },
+      {
+        path: "instructions",
+        element: <BasicLayout />,
+        children: [
+          { path: "first-section", element: <InstructionFirst/>},
+          { path: "second-section", element: <InstructionSecond/>},
         ],
       },
     ],

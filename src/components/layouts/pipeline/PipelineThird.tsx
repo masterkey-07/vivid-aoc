@@ -71,6 +71,7 @@ export function PipelineThirdSection() {
             <button type="button" onClick={startPlay}>
               Play
             </button>
+            <br></br><br></br><br></br>
             <div className={styles.tableContainer}>
               <PipelineHeader />
               <Table>
