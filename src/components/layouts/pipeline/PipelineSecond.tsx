@@ -44,7 +44,7 @@ export function PipelineSecond() {
           </p>
         </div>
     </div>
-      <Button text="Próximo" link="/pipeline/third-section" />
+      <Button text="Próximo" link="/pipeline/thirdmeio-section" />
     </>
   );
 }
