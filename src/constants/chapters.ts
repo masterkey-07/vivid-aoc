@@ -29,5 +29,9 @@ export const chapters: Chapter[] = [
     key: "memory",
     title: "Mémoria",
     subtitles: ["Bem Vindo!", "Propósito", "Conteúdo", "Agradecimentos"],
-  },
+  },{
+    key: "instrucoes",
+    title: "Instruções",
+    subtitles: ["O que é uma Instrução?", "Interagindo com uma Instrução"],
+  }
 ];
