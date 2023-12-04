@@ -14,6 +14,10 @@ import { ArchitectureSecond } from "./components/layouts/architecture/Architectu
 import { ArchitectureThird } from "./components/layouts/architecture/ArchitectureThird.js";
 import { ArchitectureFourth } from "./components/layouts/architecture/ArchitectureFourth.js";
 import { MemoryThird } from "./components/layouts/memory/MemoryThird.js";
+import { PipelineFirstSection } from "./components/layouts/pipeline/PipelineFirst.js";
+import { PipelineSecondSection } from "./components/layouts/pipeline/PipelineSecond.js";
+import { PipelineThirdSection } from "./components/layouts/pipeline/PipelineThird.js";
+import { PipelineFourthSection } from "./components/layouts/pipeline/PipelineFourth.js";
 
 const AppWrapper = () => {
   return (
@@ -57,10 +61,10 @@ const browserRouter = createBrowserRouter([
         path: "pipeline",
         element: <BasicLayout />,
         children: [
-          { path: "first-section", element: <Fragment /> },
-          { path: "second-section", element: <Fragment /> },
-          { path: "third-section", element: <Fragment /> },
-          { path: "fourth-section", element: <Fragment /> },
+          { path: "first-section", element: <PipelineFirstSection /> },
+          { path: "second-section", element: <PipelineSecondSection /> },
+          { path: "third-section", element: <PipelineThirdSection /> },
+          { path: "fourth-section", element: <PipelineFourthSection /> },
         ],
       },
       {
