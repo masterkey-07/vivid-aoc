@@ -1,7 +1,7 @@
 import { useState } from "react";
 import Button from "../../button/Button";
 
-export const PipelineFourthSection = () => {
+export const InstructionSecond = () => {
   const [answers, setAnswers] = useState({
     question1: null,
     question2: null,
@@ -39,15 +39,15 @@ export const PipelineFourthSection = () => {
       >
         <h2 style={{ fontSize: "3rem", color: "#3C486B" }}>Quiz</h2>
         <div style={{ marginTop: "30px", textAlign: "left" }}>
-          <p style={{ fontSize: "2rem", color: "#3C486B", textAlign: "left" }}>
-            Pergunta 1: Qual é a principal vantagem de um pipeline em um
-            processador?
+          <p style={{ fontSize: "1.5rem", color: "#3C486B", textAlign: "left" }}>
+            Pergunta 1: Como as instruções são subdivididas em campos e quais são as funções típicas desses campos em um processador?
+
             </p>
           <br></br>
           <form>
             <label
               style={{
-                fontSize: "1.7rem",
+                fontSize: "1.5rem",
                 color: "#3C486B",
                 textAlign: "left",
               }}
@@ -58,7 +58,7 @@ export const PipelineFourthSection = () => {
                 checked={answers.question1 === "A"}
                 onChange={() => setAnswers({ ...answers, question1: "A" })}
               />
-              A) Aumento da complexidade do processador.
+              A) Para armazenar dados do usuário e controlar a operação do processador.
               </label>
             <br />
             <br></br>
@@ -75,13 +75,13 @@ export const PipelineFourthSection = () => {
                 checked={answers.question1 === "B"}
                 onChange={() => setAnswers({ ...answers, question1: "B" })}
               />
-              B) Redução do consumo de energia.
+              B) Para economizar espaço na memória e acelerar a execução das instruções.
               </label>
             <br />
             <br></br>
             <label
               style={{
-                fontSize: "1.7rem",
+                fontSize: "1.5rem",
                 color: "#3C486B",
                 textAlign: "left",
               }}
@@ -92,13 +92,13 @@ export const PipelineFourthSection = () => {
                 checked={answers.question1 === "C"}
                 onChange={() => setAnswers({ ...answers, question1: "C" })}
               />
-              C) Aumento da latência.
+              C) Para realizar operações matemáticas complexas e controlar o acesso à memória principal.
               </label>
             <br />
             <br></br>
             <label
               style={{
-                fontSize: "1.7rem",
+                fontSize: "1.5rem",
                 color: "#3C486B",
                 textAlign: "left",
               }}
@@ -109,13 +109,13 @@ export const PipelineFourthSection = () => {
                 checked={answers.question1 === "D"}
                 onChange={() => setAnswers({ ...answers, question1: "D" })}
               />
-              D) Aumento da velocidade de processamento.
+              D) Para especificar a operação a ser executada, os operandos e onde o resultado será armazenado.
               </label>
             <br />
             <br></br>
             <label
               style={{
-                fontSize: "1.7rem",
+                fontSize: "1.5rem",
                 color: "#3C486B",
                 textAlign: "left",
               }}
@@ -126,29 +126,26 @@ export const PipelineFourthSection = () => {
                 checked={answers.question1 === "E"}
                 onChange={() => setAnswers({ ...answers, question1: "E" })}
               />
-              E) Diminuição do tamanho do processador.
+              E) Para facilitar a programação de software e aumentar a complexidade do processador.
               </label>
           </form>
 
           <br></br>
           <p
             style={{
-              fontSize: "2rem",
+              fontSize: "1.5rem",
               marginTop: "20px",
               color: "#3C486B",
               textAlign: "left",
             }}
           >
-            Pergunta 2: Considerando a aplicação do conceito de pipeline na
-            nossa analogia, o que pode acontecer se um cliente quiser que a
-            etapa de dobra de suas roupas seja pulada (ele não deseja receber as
-            roupas dobradas)?
+            Pergunta 2: Qual é a importância da padronização dos formatos das instruções e dos campos em uma arquitetura de processador?
             </p>
           <br></br>
           <form>
             <label
               style={{
-                fontSize: "1.7rem",
+                fontSize: "1.5rem",
                 color: "#3C486B",
                 textAlign: "left",
               }}
@@ -159,13 +156,13 @@ export const PipelineFourthSection = () => {
                 checked={answers.question2 === "A"}
                 onChange={() => setAnswers({ ...answers, question2: "A" })}
               />
-              A) Atraso na entrega das roupas do cliente.
+              A) Para tornar a programação mais complicada.
               </label>
             <br />
             <br></br>
             <label
               style={{
-                fontSize: "1.7rem",
+                fontSize: "1.5rem",
                 color: "#3C486B",
                 textAlign: "left",
               }}
@@ -176,8 +173,7 @@ export const PipelineFourthSection = () => {
                 checked={answers.question2 === "B"}
                 onChange={() => setAnswers({ ...answers, question2: "B" })}
               />
-              B) Necessidade de retrabalho para adicionar a etapa pulada
-              posteriormente.
+              B) Para limitar a variedade de operações possíveis.
               </label>
             <br />
             <br></br>
@@ -194,7 +190,7 @@ export const PipelineFourthSection = () => {
                 checked={answers.question2 === "C"}
                 onChange={() => setAnswers({ ...answers, question2: "C" })}
               />
-              C) Possível desperdício de recursos e tempo.
+              C) Para facilitar a compatibilidade entre diferentes processadores.
               </label>
             <br />
             <br></br>
@@ -211,7 +207,7 @@ export const PipelineFourthSection = () => {
                 checked={answers.question2 === "D"}
                 onChange={() => setAnswers({ ...answers, question2: "D" })}
               />
-              D) Melhor eficiência no processamento das roupas.
+              D) Para aumentar a complexidade do processador.
               </label>
             <br />
             <br></br>
@@ -228,7 +224,7 @@ export const PipelineFourthSection = () => {
                 checked={answers.question2 === "E"}
                 onChange={() => setAnswers({ ...answers, question2: "E" })}
               />
-              E) Aumento da velocidade de processamento das roupas.
+              E) Para reduzir o desempenho do processador.
               </label>
           </form>
         </div>
