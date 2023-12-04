@@ -13,12 +13,11 @@ import { ArchitectureFirst } from "./components/layouts/architecture/Architectur
 import { ArchitectureSecond } from "./components/layouts/architecture/ArchitectureSecond";
 import { ArchitectureThird } from "./components/layouts/architecture/ArchitectureThird";
 import { ArchitectureFourth } from "./components/layouts/architecture/ArchitectureFourth";
-import { InstructionFirst } from "./components/layouts/instructions/InstructionFirst";
-import { InstructionSecond } from "./components/layouts/instructions/InstructionSecond";
 import { PipelineFirstSection } from "./components/layouts/pipeline/PipelineFirst.js";
-import { PipelineSecondSection } from "./components/layouts/pipeline/PipelineSecond";
+import { PipelineSecond } from "./components/layouts/pipeline/PipelineSecond";
 import { PipelineThirdSection } from "./components/layouts/pipeline/PipelineThird.js";
 import { PipelineFourthSection } from "./components/layouts/pipeline/PipelineFourth.js";
+import { PipelineThirdMeio } from "./components/layouts/pipeline/PipelineThirdMeio.js";
 
 const AppWrapper = () => {
   return (
@@ -63,17 +62,10 @@ const browserRouter = createBrowserRouter([
         element: <BasicLayout />,
         children: [
           { path: "first-section", element: <PipelineFirstSection /> },
-          { path: "second-section", element: <PipelineSecondSection /> },
+          { path: "second-section", element: <PipelineSecond /> },
+          { path: "thirdmeio-section", element: <PipelineThirdMeio /> },
           { path: "third-section", element: <PipelineThirdSection /> },
           { path: "fourth-section", element: <PipelineFourthSection /> },
-        ],
-      },
-      {
-        path: "instructions",
-        element: <BasicLayout />,
-        children: [
-          { path: "first-section", element: <InstructionFirst/>},
-          { path: "second-section", element: <InstructionSecond/>},
         ],
       },
     ],
