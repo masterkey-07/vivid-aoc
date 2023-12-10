@@ -13,26 +13,26 @@ const DoneColor = "#6a994e";
 const PipelineHeader = () => {
   return (
     <div className={styles.tableHeader}>
-      <p>6h</p>
-      <p>6h30</p>
-      <p>7h</p>
-      <p>7h30</p>
-      <p>8h</p>
-      <p>8h30</p>
-      <p>9h</p>
-      <p>9h30</p>
-      <p>10h</p>
-      <p>10h30</p>
-      <p>11h</p>
-      <p>11h30</p>
-      <p>12h</p>
-      <p>12h30</p>
-      <p>13h</p>
-      <p>13h30</p>
-      <p>14h</p>
-      <p>14h30</p>
-      <p>15h</p>
-      <p>15h30</p>
+      <span>6h</span>
+      <span>6h30</span>
+      <span>7h</span>
+      <span>7h30</span>
+      <span>8h</span>
+      <span>8h30</span>
+      <span>9h</span>
+      <span>9h30</span>
+      <span>10h</span>
+      <span>10h30</span>
+      <span>11h</span>
+      <span>11h30</span>
+      <span>12h</span>
+      <span>12h30</span>
+      <span>13h</span>
+      <span>13h30</span>
+      <span>14h</span>
+      <span>14h30</span>
+      <span>15h</span>
+      <span>15h30</span>
     </div>
   );
 };
@@ -143,31 +143,31 @@ const StepImages = ({
 
   React.useLayoutEffect(() => {
     if (play) {
-      const a = setTimeout(
+      const firstConclusionTimeout = setTimeout(
         () => setConcluded([true, false, false, false]),
         baseTimeout
       );
 
-      const b = setTimeout(
+      const secondConclusionTimeout = setTimeout(
         () => setConcluded([true, true, false, false]),
         baseTimeout + 1000
       );
 
-      const c = setTimeout(
+      const thirdConclusionTimeout = setTimeout(
         () => setConcluded([true, true, true, false]),
         baseTimeout + 2000
       );
 
-      const d = setTimeout(
+      const fourthConclusionTimeout = setTimeout(
         () => setConcluded([true, true, true, true]),
         baseTimeout + 3000
       );
 
       return () => {
-        clearTimeout(a);
-        clearTimeout(b);
-        clearTimeout(c);
-        clearTimeout(d);
+        clearTimeout(firstConclusionTimeout);
+        clearTimeout(secondConclusionTimeout);
+        clearTimeout(thirdConclusionTimeout);
+        clearTimeout(fourthConclusionTimeout);
       };
     } else {
       setConcluded([false, false, false, false]);

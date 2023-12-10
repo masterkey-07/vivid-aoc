@@ -26,6 +26,8 @@ const StyledMoon = styled.div`
     width: 50vh;
     -webkit-user-drag: none;
     user-select: none;
+
+    animation: mooning 360s ease-in-out infinite;
   }
 
   .space-man {
@@ -40,6 +42,32 @@ const StyledMoon = styled.div`
     width: 50vh;
     user-select: none;
     -webkit-user-drag: none;
+
+    animation: floating 3s ease-in-out infinite;
+  }
+
+  @keyframes mooning {
+    0% {
+      transform: scale(1.5) rotateZ(0deg);
+    }
+
+    100% {
+      transform: scale(1.5) rotateZ(360deg);
+    }
+  }
+
+  @keyframes floating {
+    0% {
+      transform: scale(0.8) translate(0px, 0px);
+    }
+
+    50% {
+      transform: scale(0.8) translate(0px, 15px);
+    }
+
+    100% {
+      transform: scale(0.8) translate(0px, 0px);
+    }
   }
 
   .moon-shadow {
@@ -50,7 +78,6 @@ const StyledMoon = styled.div`
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
-    background-color: red;
     border-radius: 100%;
     box-shadow: -40px 0px 50px 10px rgba(0, 0, 0, 0.5);
     user-select: none;

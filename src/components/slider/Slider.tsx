@@ -8,7 +8,7 @@ import {
   AppSliderSectionSpacingStyle,
   AppSubSliderSectionStyle,
 } from "./Slider.style";
-import { FC, Fragment, useEffect, useState } from "react";
+import { FC, Fragment } from "react";
 
 type SliderPointProps = {
   title: string;

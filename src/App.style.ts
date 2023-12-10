@@ -27,4 +27,8 @@ export const GlobalStyle = createGlobalStyle`
     padding: 0;
     font-family: sans-serif;
   }
+
+  :root{
+    --gold :#ffe81f;
+  }
 `;

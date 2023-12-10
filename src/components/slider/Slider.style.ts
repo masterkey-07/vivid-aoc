@@ -64,15 +64,18 @@ export const AppSliderPointStyle = styled.div<AppSliderPointStyleProps>`
   height: calc(5em - 8px);
   width: calc(5em - 8px);
 
-  border: 4px solid rgb(255, 217, 0);
+  font-weight: 700;
 
-  background-color: rgba(255, 217, 0, 0.3);
+  border: 4px solid rgb(255, 217, 0);
 
   border-radius: 100%;
 
   margin-bottom: ${({ selected }) => (selected ? "7em" : "")};
 
   box-shadow: ${({ selected }) => (selected ? "0 0 20px 0 yellow" : "none")};
+
+  background-color: ${({ selected }) =>
+    selected ? "rgba(255, 217, 0, 1)" : "rgba(255, 217, 0, 0.3)"};
 
   z-index: 5;
 
@@ -104,9 +107,12 @@ export const AppSubSliderPointStyle = styled.div<{ selected: boolean }>`
   height: calc(3.5em - 6px);
   width: calc(3.5em - 6px);
 
+  font-weight: 600;
+
   border: 3px solid rgb(255, 217, 0);
 
-  background-color: rgba(255, 217, 0, 0.3);
+  background-color: ${({ selected }) =>
+    selected ? "rgba(255, 217, 0, 1)" : "rgba(255, 217, 0, 0.3)"};
 
   border-radius: 100%;
 

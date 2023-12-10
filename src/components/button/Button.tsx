@@ -1,4 +1,32 @@
 import { useNavigate } from "react-router-dom";
+import styled from "styled-components";
+
+const StyledButton = styled.div`
+  position: fixed;
+  bottom: 5vh;
+  z-index: 10;
+  font-size: 3rem;
+  padding: 1rem;
+  background-color: transparent;
+  color: var(--gold);
+  border: 4px solid var(--gold);
+  border-radius: 12px;
+  cursor: pointer;
+  background-color: rgba(0, 0, 0, 0.5);
+
+  &:hover {
+    box-shadow: 0 0 10px 0 var(--gold);
+  }
+
+  transition: 50ms ease-in-out;
+
+  user-select: none;
+
+  &:active {
+    transition-duration: 0;
+    box-shadow: 0 0 20px 0 var(--gold);
+  }
+`;
 
 const Button = ({
   text,
@@ -14,29 +42,19 @@ const Button = ({
   const navigate = useNavigate();
 
   return (
-    <button
+    <StyledButton
       onClick={() => {
         navigate(link);
       }}
       style={{
         ...style,
-        position: "fixed",
+        width: "15rem",
         right: isBack ? "" : "5vw",
-        left: isBack ? "20%" : "",
-        bottom: "5vh",
-        zIndex: "10",
-        fontSize: "3rem",
-        padding: "1rem",
-        backgroundColor: "transparent",
-        color: "gold",
-        border: "2px solid gold",
-        borderRadius: "12px",
-        boxShadow: "0 0 10px 0 gold",
-        cursor: "pointer",
+        left: isBack ? "calc(20% + 5vw)" : "",
       }}
     >
       {text}
-    </button>
+    </StyledButton>
   );
 };
 
