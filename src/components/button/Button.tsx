@@ -13,6 +13,7 @@ const StyledButton = styled.div`
   border-radius: 12px;
   cursor: pointer;
   background-color: rgba(0, 0, 0, 0.5);
+  text-align: center;
 
   &:hover {
     box-shadow: 0 0 10px 0 var(--gold);

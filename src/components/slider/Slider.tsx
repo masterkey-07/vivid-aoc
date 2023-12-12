@@ -1,4 +1,4 @@
-import { useLocation } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
 import { chapters } from "../../constants/chapters";
 import {
   AppSliderPointStyle,
@@ -14,11 +14,13 @@ type SliderPointProps = {
   title: string;
   subtitles: string[];
   selected: boolean;
+  chapterKey: string;
 };
 
 type SubSliderPointProps = {
   selected: boolean;
   subtitles: string[];
+  chapterKey: string;
 };
 
 const indexMap: Record<number, string> = {
@@ -28,31 +30,52 @@ const indexMap: Record<number, string> = {
   3: "fourth",
 };
 
-const SubSliderPoint: FC<SubSliderPointProps> = ({ selected, subtitles }) => {
+const SubSliderPoint: FC<SubSliderPointProps> = ({
+  selected,
+  subtitles,
+  chapterKey,
+}) => {
   const location = useLocation();
+
+  const navigate = useNavigate();
 
   if (!selected) return <Fragment />;
 
   return (
     <AppSubSliderSectionStyle>
-      {subtitles.map((subtitle, index) => (
-        <AppSubSliderPointStyle
-          selected={location.pathname.includes(indexMap[index])}
-          content={subtitle}
-        />
-      ))}
+      {subtitles.map((subtitle, index) => {
+        const sectionPath = indexMap[index];
+
+        return (
+          <AppSubSliderPointStyle
+            onClick={() => navigate(`${chapterKey}/${sectionPath}-section`)}
+            selected={location.pathname.includes(sectionPath)}
+            content={subtitle}
+          />
+        );
+      })}
     </AppSubSliderSectionStyle>
   );
 };
 
 const SliderPoint: FC<SliderPointProps> = (props) => {
-  const { selected, subtitles, title } = props;
+  const { selected, subtitles, title, chapterKey } = props;
+
+  const navigate = useNavigate();
 
   return (
     <AppSliderSectionStyle selected={selected}>
       <AppSliderSectionSpacingStyle selected={selected}>
-        <AppSliderPointStyle content={title} selected={selected} />
-        <SubSliderPoint selected={selected} subtitles={subtitles} />
+        <AppSliderPointStyle
+          onClick={() => navigate(`${chapterKey}/first-section`)}
+          content={title}
+          selected={selected}
+        />
+        <SubSliderPoint
+          chapterKey={chapterKey}
+          selected={selected}
+          subtitles={subtitles}
+        />
       </AppSliderSectionSpacingStyle>
     </AppSliderSectionStyle>
   );
@@ -61,14 +84,13 @@ const SliderPoint: FC<SliderPointProps> = (props) => {
 export const Slider = () => {
   const location = useLocation();
 
-  console.log(location.pathname);
-
   return (
     <AppSliderStyle>
       {chapters.map((chapter, index) => {
         return (
           <SliderPoint
-            key={chapter.title}
+            key={chapter.key}
+            chapterKey={chapter.key}
             title={chapter.title}
             subtitles={chapter.subtitles}
             selected={location.pathname.includes(chapter.key)}

@@ -1,8 +1,8 @@
-import "./App.js";
+import "./App";
 import { Slider } from "./components/slider/Slider";
-import { AppContainer, GlobalStyle } from "./App.style.js";
+import { AppContainer, GlobalStyle } from "./App.style";
 import { Outlet, createBrowserRouter, RouterProvider } from "react-router-dom";
-import { Moon } from "./components/moon/Moon.js";
+import { Moon } from "./components/moon/Moon";
 import { Fragment } from "react";
 import { BasicLayout } from "./components/basic-layout/BasicLayout";
 import { IntroductionFirst } from "./components/layouts/introduction/IntroductionFirst";
@@ -13,14 +13,14 @@ import { ArchitectureFirst } from "./components/layouts/architecture/Architectur
 import { ArchitectureSecond } from "./components/layouts/architecture/ArchitectureSecond";
 import { ArchitectureThird } from "./components/layouts/architecture/ArchitectureThird";
 import { ArchitectureFourth } from "./components/layouts/architecture/ArchitectureFourth";
-import { PipelineFirstSection } from "./components/layouts/pipeline/PipelineFirst.js";
+import { PipelineFirstSection } from "./components/layouts/pipeline/PipelineFirst";
 import { PipelineSecond } from "./components/layouts/pipeline/PipelineSecond";
-import { PipelineThirdSection } from "./components/layouts/pipeline/PipelineThird.js";
-import { PipelineFourthSection } from "./components/layouts/pipeline/PipelineFourth.js";
-import { MemoryFirst } from "./components/layouts/memory/MemoryFirst.js";
-import { MemorySecond } from "./components/layouts/memory/MemorySecond.js";
-import { MemoryFourth } from "./components/layouts/memory/MemoryFourth.js";
-import { MemoryThird } from "./components/layouts/memory/MemoryThird.js";
+import { PipelineThirdSection } from "./components/layouts/pipeline/PipelineThird/PipelineThird";
+import { PipelineFourthSection } from "./components/layouts/pipeline/PipelineFourth";
+import { MemoryFirst } from "./components/layouts/memory/MemoryFirst";
+import { MemorySecond } from "./components/layouts/memory/MemorySecond";
+import { MemoryFourth } from "./components/layouts/memory/MemoryFourth";
+import { MemoryThird } from "./components/layouts/memory/MemoryThird/MemoryThird";
 
 const AppWrapper = () => {
   return (

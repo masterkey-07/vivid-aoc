@@ -4,7 +4,7 @@ import Button from "../../button/Button";
 export function PipelineSecond() {
   return (
     <BasicContent>
-      <p style={{ fontSize: "1.8rem" }}>
+      <p style={{ fontSize: "1.7rem" }}>
         Vamos imaginar que você trabalhe em uma lavanderia. No início do dia 4
         clientes chegam à loja deixando suas roupas. Sabendo que o processo
         completo consiste em lavar, secar, dobrar e empacotar, como você faria

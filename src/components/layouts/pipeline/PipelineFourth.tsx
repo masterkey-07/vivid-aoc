@@ -1,4 +1,3 @@
-import { useState } from "react";
 import Button from "../../button/Button";
 import { Question, QuizForm } from "../../quiz-form/QuizForm";
 import { BasicContent } from "../../basic-content/BasicContent";
