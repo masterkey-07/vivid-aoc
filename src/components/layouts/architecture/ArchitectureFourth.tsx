@@ -1,5 +1,5 @@
 import Button from "../../button/Button";
-import { BasicContent, Bold } from "../../basic-content/BasicContent";
+import { BasicContent } from "../../basic-content/BasicContent";
 import { Question, QuizForm } from "../../quiz-form/QuizForm";
 
 const architectureQuestions: Question[] = [

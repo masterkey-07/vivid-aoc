@@ -86,7 +86,7 @@ export const Slider = () => {
 
   return (
     <AppSliderStyle>
-      {chapters.map((chapter, index) => {
+      {chapters.map((chapter) => {
         return (
           <SliderPoint
             key={chapter.key}
