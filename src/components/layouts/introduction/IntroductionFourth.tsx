@@ -20,9 +20,9 @@ export const IntroductionFourth = () => {
           <span>Victor Chaves</span> <span> Maria Clara</span>
           <div style={{ gridColumn: "1 / 3", height: "1.8rem" }} />
           <span> David Aaron</span>
-          <span> João Gado</span>
+          <span> João Vinícius</span>
           <div style={{ gridColumn: "1 / 3", height: "1.8rem" }} />
-          <span style={{ gridColumn: "1 / 3" }}>Vinícius Silva</span>
+          <span style={{ gridColumn: "1 / 3" }}>Vinícius Henrique</span>
         </NameGrid>
       </p>
       <Button text="Voltar" link="/introduction/third-section" isBack />
